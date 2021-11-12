@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cloud Services</title>
+	<link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<nav class="navbar">
+			
+			<ul>
+				<li><a class="active" href="#">Home</a></li>
+			</ul>
+		</nav>
+
+		<div class="center">
+			<h1>Let me help you</h1>
+		</div>
+
+		<form action="{{ url_for('text_to_speech') }}" method="post">
+			<div class="msg">{{ msg }}</div>
+			<textarea class="textboxes " id="to_speech" name="to_speech" type="text" rows="20" cols="40"
+				placeholder="Enter a sentence to convert to speech" class="to_speech" autocomplete="off"
+				role="textbox" aria-autocomplete="list" aria-haspopup="true"
+				style="border:inset 4px black;"></textarea></br></br>
+			<label id="notusing" name="notusing">
+				{{ notusing }}
+			</label><br><br>
+
+			<input class="button" type="submit" class="btn" value="Convert to speech"></br></br>
+		</form>
+
+</body>
+</html>
